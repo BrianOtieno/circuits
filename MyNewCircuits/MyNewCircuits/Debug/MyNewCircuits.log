@@ -1,0 +1,21 @@
+﻿  Source.c
+e:\circuits\mynewcircuits\mynewcircuits\source.c(88): warning C4098: 'readWholeFile': 'void' function returning a value
+e:\circuits\mynewcircuits\mynewcircuits\source.c(92): warning C4013: 'strchr' undefined; assuming extern returning int
+e:\circuits\mynewcircuits\mynewcircuits\source.c(92): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+e:\circuits\mynewcircuits\mynewcircuits\source.c(113): warning C4013: 'count_apps' undefined; assuming extern returning int
+e:\circuits\mynewcircuits\mynewcircuits\source.c(129): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(131): warning C4013: 'memset' undefined; assuming extern returning int
+e:\circuits\mynewcircuits\mynewcircuits\source.c(143): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(209): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(227): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(270): warning C4013: 'strncat' undefined; assuming extern returning int
+e:\circuits\mynewcircuits\mynewcircuits\source.c(351): warning C4101: 'n2': unreferenced local variable
+e:\circuits\mynewcircuits\mynewcircuits\source.c(437): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(439): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(443): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(446): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(448): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(450): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\circuits\mynewcircuits\mynewcircuits\source.c(457): warning C4013: 'strcpy' undefined; assuming extern returning int
+e:\circuits\mynewcircuits\mynewcircuits\source.c(459): warning C4013: 'strcat' undefined; assuming extern returning int
+  MyNewCircuits.vcxproj -> E:\Circuits\MyNewCircuits\Debug\MyNewCircuits.exe
