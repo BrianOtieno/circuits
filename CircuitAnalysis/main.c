@@ -6,7 +6,8 @@
 #include "openfile.h"
 #include "assigndata.h"
 #include "matrixmultiplication.h"
-#include "delimiterfunction.h"system("eog image.jpg");
+#include "delimiterfunction.h"
+#include "outputdisplay.h"
 
 
 struct input_data 
@@ -43,7 +44,7 @@ struct output_data
 char *open_file();
 // char *delim_func(const char* data, const char* start_delim, const char* end_delim);
 // struct input_data assign_data(char* data_str);
-// struct matrix matrix_multiply(struct matrix matrix1, struct matrix matrix2);
+struct matrix matrix_multiply(struct matrix matrix1, struct matrix matrix2);
 struct matrix circuit_matrix(struct input_data data_struct);
 struct output_data output_struct(struct input_data data_struct, struct matrix circuitmatrix);
 void file_print(char* data_string, struct output_data outputdata);
