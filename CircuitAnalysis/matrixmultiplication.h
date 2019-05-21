@@ -2,8 +2,6 @@
 #include <math.h>
 #include <string.h>
 
-// #ifndef matrixmultiplication.h
-// #define matrixmultiplication.h
 
 
 struct matrix matrix_multiply(struct matrix matrix1, struct matrix matrix2)
@@ -62,16 +60,16 @@ struct output_data output_struct(struct input_data data_struct, struct matrix ci
 {
 	//Forming output struct
 	struct output_data outputdata = {
-	.Vin = {0},
-	.Iin = {0},
-	.Pin = {0},
-	.Zin = {0},
-	.Vout = {0},
-	.Iout = {0},
-	.Pout = {0},
-	.Zout = {0},
-	.Av = {0},
-	.Ai = {0}
+	.Vin = 0,
+	.Iin = 0,
+	.Pin = 0,
+	.Zin = 0,
+	.Vout = 0,
+	.Iout = 0,
+	.Pout = 0,
+	.Zout = 0,
+	.Av = 0,
+	.Ai = 0
 	};
 
 	//Stores Zin in outputdata[0].Zin struct, and db equivalent in outputdata.Zin[1]

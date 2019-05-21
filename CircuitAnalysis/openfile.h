@@ -9,7 +9,8 @@
 char* open_file()
 {
 	//Opens file "ABCD_input.dat" and stores string in data_str
-	FILE* input_data = fopen("ABCD_input.dat", "r");
+	// FILE* input_data = fopen("ABCD_input.dat", "r");
+	FILE* input_data = fopen("../Data/Netlist_06a.dat", "r");
 
 	if (input_data == NULL) {
 		return "No file opened";
