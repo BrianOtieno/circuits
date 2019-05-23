@@ -131,7 +131,7 @@ void file_print(char* data_string, struct output_data outputdata)
 			else
 			{
 				strcat(print_unit, "V, ");
-				outputdata.Vout[0] >= 0 ? sprintf(fstr[j], "%g", outputdata.Vout[0]): sprintf(fstr[j], "%g", outputdata.Vout[0]);
+				outputdata.Vout[0] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Vout[0]): sprintf(fstr[j], "  %g", outputdata.Vout[0]);
 				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
