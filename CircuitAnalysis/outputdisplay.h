@@ -3,9 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#ifndef DELIMITERFUNCTION_H
-#include "delimiterfunction.h"
-#endif
+
 
 void file_print(char* data_string, struct output_data outputdata)
 {

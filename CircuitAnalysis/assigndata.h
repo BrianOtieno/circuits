@@ -2,8 +2,21 @@
 #include <string.h>
 #include <stdlib.h>
 
+#ifndef DELIMITERFUNCTION_H
 #include "delimiterfunction.h"
+#endif
 
+struct input_data 
+{
+	int node_arr[20][2];
+	float res[20];
+	float source_voltage;
+	float source_current;
+	float source_res;
+	int load_node;
+	int load_res;
+	int num_elements;
+};
 
 struct input_data assign_data(char* data_str)
 {
@@ -51,7 +64,7 @@ struct input_data assign_data(char* data_str)
 
 	//Assigns <TERMS> block values to variables
 	char* thv_source = delim_func(data_str, "<TERMS>", "</TERMS>");
-	sscanf(thv_source, "%2s=%f %2s=%f\n", &thv_type, &source_val, &thv_input, &source_input);
+	sscanf(thv_source, "%2s=%f %2s=%f\n", thv_type, &source_val, thv_input, &source_input);
 
 	//Assigns source values for current or voltage
 	if (thv_type[0] == 'V') {

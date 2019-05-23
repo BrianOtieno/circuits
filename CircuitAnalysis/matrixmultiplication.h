@@ -1,6 +1,26 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <stdio.h>
+
+struct matrix
+{
+	float A, B, C, D;
+};
+
+struct output_data
+{
+	float Vin[2];
+	float Iin[2];
+	float Pin[2];
+	float Zin[2];
+	float Vout[2];
+	float Iout[2];
+	float Pout[2];
+	float Zout[2];
+	float Av[2];
+	float Ai[2];
+};
 
 
 
