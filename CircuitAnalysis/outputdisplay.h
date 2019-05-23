@@ -46,14 +46,14 @@ void file_print(char* data_string, struct output_data outputdata)
 				sprintf(fstr[j], "%g", outputdata.Vin[1]);
 				
 				//When output is in dB, the float for the dB variable type is concatenated to print_val
-				strcat(fstr[j], ", ");
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "V, ");
 				sprintf(fstr[j], "%g", outputdata.Vin[0]);
-				strcat(fstr[j], ", ");
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -63,16 +63,19 @@ void file_print(char* data_string, struct output_data outputdata)
 			strcat(print_type, "Iin, ");
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
+				
 				strcat(print_unit, "dBI, ");
-				sprintf(fstr[j], "%g", outputdata.Iin[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Iin[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Iin[1]): sprintf(fstr[j], "  %g", outputdata.Iin[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
+
+								
 			}
 			else
 			{
 				strcat(print_unit, "I, ");
-				sprintf(fstr[j], "%g", outputdata.Iin[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Iin[0] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Iin[0]): sprintf(fstr[j], "  %g", outputdata.Iin[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -83,15 +86,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dBW, ");
-				sprintf(fstr[j], "%g", outputdata.Pin[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Pin[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Pin[1]): sprintf(fstr[j], "  %g", outputdata.Pin[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "W, ");
-				sprintf(fstr[j], "%g", outputdata.Pin[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Pin[0] >= 0? sprintf(fstr[j], "   %g", outputdata.Pin[0]): sprintf(fstr[j], "  %g", outputdata.Pin[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -102,15 +105,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dBOhm, ");
-				sprintf(fstr[j], "%g", outputdata.Zin[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Zin[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Zin[1]): sprintf(fstr[j], "  %g", outputdata.Zin[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "Ohm, ");
-				sprintf(fstr[j], "%g", outputdata.Zin[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Zin[0] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Zin[0]) : sprintf(fstr[j], "  %g", outputdata.Zin[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -121,15 +124,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dBV, ");
-				sprintf(fstr[j], "%g", outputdata.Vout[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Vout[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Vout[1]) : sprintf(fstr[j], "  %g", outputdata.Vout[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "V, ");
-				sprintf(fstr[j], "%g", outputdata.Vout[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Vout[0] >= 0 ? sprintf(fstr[j], "%g", outputdata.Vout[0]): sprintf(fstr[j], "%g", outputdata.Vout[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -140,15 +143,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dBI, ");
-				sprintf(fstr[j], "%g", outputdata.Iout[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Iout[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Iout[1]) : sprintf(fstr[j], "  %g", outputdata.Iout[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "I, ");
-				sprintf(fstr[j], "%g", outputdata.Iout[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Iout[0] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Iout[0]): sprintf(fstr[j], "  %g", outputdata.Iout[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -159,15 +162,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dBW, ");
-				sprintf(fstr[j], "%g", outputdata.Pout[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Pout[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Pout[1]): sprintf(fstr[j], "  %g", outputdata.Pout[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "W, ");
-				sprintf(fstr[j], "%g", outputdata.Pout[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Pout[0] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Pout[0]) : sprintf(fstr[j], "  %g", outputdata.Pout[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -178,15 +181,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dBOhm, ");
-				sprintf(fstr[j], "%g", outputdata.Zout[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Zout[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Zout[1]): sprintf(fstr[j], "  %g", outputdata.Zout[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "Ohm, ");
-				sprintf(fstr[j], "%g", outputdata.Zout[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Zout[0] >= 0? sprintf(fstr[j], "   %g", outputdata.Zout[0]) : sprintf(fstr[j], "  %g", outputdata.Zout[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -197,15 +200,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dB, ");
-				sprintf(fstr[j], "%g", outputdata.Av[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Av[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Av[1]) : sprintf(fstr[j], "  %g", outputdata.Av[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "L, ");
-				sprintf(fstr[j], "%g", outputdata.Av[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Av[0] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Av[0]) : sprintf(fstr[j], "  %g", outputdata.Av[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 
@@ -216,15 +219,15 @@ void file_print(char* data_string, struct output_data outputdata)
 			if ((strstr(outval[j], "dB")) != NULL)
 			{
 				strcat(print_unit, "dB, ");
-				sprintf(fstr[j], "%g", outputdata.Ai[1]);
-				strcat(fstr[j], ", ");
+				outputdata.Ai[1] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Ai[1]) : sprintf(fstr[j], "  %g", outputdata.Ai[1]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 			else
 			{
 				strcat(print_unit, "L, ");
-				sprintf(fstr[j], "%g", outputdata.Ai[0]);
-				strcat(fstr[j], ", ");
+				outputdata.Ai[0] >= 0 ? sprintf(fstr[j], "   %g", outputdata.Ai[0]) : sprintf(fstr[j], "   %g", outputdata.Ai[0]);
+				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
 		}
