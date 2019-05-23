@@ -43,7 +43,7 @@ void file_print(char* data_string, struct output_data outputdata)
 				strcat(print_unit, "dBV, ");
 
 				//Converts float to string type for concatenation
-				sprintf(fstr[j], "%g", outputdata.Vin[1]);
+				outputdata.Vin[1] >= 0? sprintf(fstr[j], "   %g", outputdata.Vin[1]) : sprintf(fstr[j], "  %g", outputdata.Vin[1]);
 				
 				//When output is in dB, the float for the dB variable type is concatenated to print_val
 				strcat(fstr[j], ",");
@@ -52,7 +52,7 @@ void file_print(char* data_string, struct output_data outputdata)
 			else
 			{
 				strcat(print_unit, "V, ");
-				sprintf(fstr[j], "%g", outputdata.Vin[0]);
+				outputdata.Vin[0] >=0 ? sprintf(fstr[j], "%   g", outputdata.Vin[0]) : sprintf(fstr[j], "  %g", outputdata.Vin[0]);
 				strcat(fstr[j], ",");
 				strcat(print_val, fstr[j]);
 			}
